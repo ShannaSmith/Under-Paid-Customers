@@ -24,6 +24,26 @@ customer6_name = "Ashley"
 customer6_melons = 3
 customer6_paid = 2.00
 
+
+def customer_Payments(customers_orders_file):
+    melon_cost = int(1.00)
+    customers_orders = open(customers_orders_file)
+    
+    for line in customers_orders:
+        line = line.rstrip()
+        words = line.split('|')
+
+        
+        customer = words[1]
+        count = words[2]
+        customer_payment= int(words[3])
+        customer_expected = melon_cost * count
+        if customer_expected != customer_payment:
+            print(f"{customer} paid ${customer_payment: .2f},",
+                f"expected ${customer_expected: .2f}")
+       
+
+
 customer1_expected = customer1_melons * melon_cost
 if customer1_expected != customer1_paid:
     print(f"{customer1_name} paid ${customer1_paid:.2f},",
