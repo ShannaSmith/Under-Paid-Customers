@@ -36,7 +36,7 @@ def customer_payments(customers_orders_file):
         
         customer_name = words[1]
         count = int(words[2])
-        customer_payment= float(int(words[3]))
+        customer_payment= float(words[3])
         customer_expected = melon_cost * count
         if customer_expected != customer_payment:
             print(f"{customer_name} paid ${customer_payment: .2f},",
