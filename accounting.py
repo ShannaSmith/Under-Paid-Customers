@@ -42,5 +42,5 @@ def customer_payments(customers_orders_file):
             print(f"{customer_name} paid ${customer_payment: .2f},",
                 f"expected ${customer_expected: .2f}")
        
-    customers_orders_file.close()   
-customer_payments("customer_orders.txt")
+    customers_orders.close()   
+customer_payments("customer-orders.txt")
