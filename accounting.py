@@ -25,7 +25,7 @@ customer6_melons = 3
 customer6_paid = 2.00
 
 
-def customer_Payments(customers_orders_file):
+def customer_payments(customers_orders_file):
     melon_cost = float(int(1.00))
     customers_orders = open(customers_orders_file)
     
@@ -43,4 +43,4 @@ def customer_Payments(customers_orders_file):
                 f"expected ${customer_expected: .2f}")
        
     customers_orders_file.close()   
-
+customer_payments("customer_orders.txt")
